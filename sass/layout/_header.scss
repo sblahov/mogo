@@ -1,0 +1,61 @@
+.header {
+  height: 80vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-pink, 0.9),
+      rgba($color-yellow, 0.9)
+    ),
+    url(../img/hero.png);
+  background-size: cover;
+
+  color: $color-white;
+
+  display: grid;
+  grid-template-rows: 7rem 1fr;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.nav {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-around;
+
+  &__logo {
+    display: inline-block;
+  }
+
+  &__navigation {
+    list-style: none;
+    display: inline-block;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+  }
+
+  &__link:active,
+  &__link:hover {
+    color: $color-yellow;
+    border-bottom: 2px solid $color-yellow;
+  }
+
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+.hero-area {
+  grid-column: 3 / -3;
+}
+
+.btn {
+}
