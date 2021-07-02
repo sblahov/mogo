@@ -6,7 +6,15 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/accordion";
+
+@import "layout/design";
 @import "layout/footer";
+@import "layout/grid";
 @import "layout/header";
+@import "layout/services";
+@import "layout/stats";
+@import "layout/story";
+@import "layout/what-we-do";
 
 @import "pages/home";

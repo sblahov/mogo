@@ -2,6 +2,63 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.7;
+  line-height: 1.5;
   color: $color-gray;
+}
+
+.header-1 {
+  font-weight: 800;
+  font-size: 8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 2rem;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $color-white;
+    width: 5rem;
+    height: 2px;
+    margin: 3rem auto;
+  }
+}
+
+.header__span {
+  font-family: "kaushan script", sans-serif;
+  display: inline-block;
+  font-size: 4rem;
+}
+
+.heading-2__span {
+  font-family: "kaushan script", sans-serif;
+  font-size: 2.5rem;
+  display: inline-block;
+  color: $color-black;
+}
+
+.heading-2 {
+  color: $color-black;
+  font-size: 3rem;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $color-pink;
+    width: 5rem;
+    height: 2px;
+    margin: 3rem auto;
+  }
+}
+
+.heading-3 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+p {
+  font-family: "roboto", sans-serif;
+  font-size: 1.3rem;
 }

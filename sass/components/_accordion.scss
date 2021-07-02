@@ -1,0 +1,52 @@
+.accordion {
+  width: 100%;
+  display: grid;
+  grid-row-gap: 1rem;
+
+  &__item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-column-gap: 2rem;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    border: 1px solid $color-gray;
+    border-radius: 2px;
+    box-shadow: 0 2px rgba($color-gray, 0.2);
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $color-blue;
+  }
+
+  &__heading {
+    margin-right: auto;
+    font-weight: 300;
+  }
+
+  &__btn {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-gray;
+  }
+
+  &__detail {
+    // height: 12rem;
+    width: 110%;
+  }
+
+  &__text {
+  }
+
+  &__hidden {
+    display: none;
+  }
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -21,7 +21,7 @@
     <title>MoGo</title>
   </head>
 
-  <body>
+  <body class="container">
     <header class="header">
       <nav class="nav">
         <div class="nav__logo">MoGo</div>
@@ -32,27 +32,287 @@
           <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
           <li class="nav__item">
-            <a href="#" class="nav__link">!</a>
-            <!-- <svg class="nav__icon">
-              <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
-            </svg> -->
+            <a href="#">
+              <svg class="nav__icon">
+                <use
+                  xlink:href="img/symbol-defs.svg#icon-shopping-cart"
+                ></use></svg
+            ></a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">!</a>
-            <!-- <svg class="nav__icon">
-              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
-            </svg> -->
+            <a href="#">
+              <svg class="nav__icon">
+                <use
+                  xlink:href="img/symbol-defs.svg#icon-magnifying-glass"
+                ></use></svg
+            ></a>
           </li>
         </ul>
       </nav>
       <div class="hero-area">
-        <span class="header_-span">Creative Template</span>
+        <span class="header__span">Creative Template</span>
         <h1 class="header-1">
           Welcome<br />
           to MoGo
         </h1>
-        <button class="btn--transparent">Learn More</button>
+        <button class="btn btn--transparent">Learn More</button>
       </div>
     </header>
+
+    <section class="section__margin story">
+      <div class="story__description">
+        <span class="heading-2__span">What we do</span><br />
+        <h2 class="heading-2">Story About Us</h2>
+        <p class="story__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          nisi quae animi molestiae ducimus. Cupiditate neque doloribus illum
+          quo reprehenderit, odit pariatur perferendis architecto saepe, quas
+          sunt! Debitis, omnis sequi!
+        </p>
+      </div>
+      <div class="story__cards">
+        <a class="story__link" href="#">
+          <figure class="story__card">
+            <img src="img/about-1.png" alt="image 1" class="story__img" />
+            <div class="story__caption">
+              <svg class="story__caption--icon">
+                <use xlink:href="img/symbol-defs.svg#icon-users"></use>
+              </svg>
+              <p class="story__caption--text">Super Team</p>
+            </div>
+          </figure>
+        </a>
+
+        <a class="story__link" href="#">
+          <figure class="story__card">
+            <img src="img/about-2.png" alt="image 2" class="story__img" />
+            <div class="story__caption">
+              <svg class="story__caption--icon">
+                <use xlink:href="img/symbol-defs.svg#icon-camera"></use>
+              </svg>
+              <p class="story__caption--text">Creativity</p>
+            </div>
+          </figure>
+        </a>
+
+        <a class="story__link" href="#">
+          <figure class="story__card">
+            <img src="img/about-3.png" alt="image 3" class="story__img" />
+            <div class="story__caption">
+              <svg class="story__caption--icon">
+                <use xlink:href="img/symbol-defs.svg#icon-laptop"></use>
+              </svg>
+              <p class="story__caption--text">Digital</p>
+            </div>
+          </figure>
+        </a>
+      </div>
+    </section>
+
+    <section class="section__margin stats">
+      <div class="stat">
+        <p class="stat__number">42</p>
+        <p class="stat__description">Web Design Projects</p>
+      </div>
+
+      <div class="stat">
+        <p class="stat__number">123</p>
+        <p class="stat__description">Happy Clients</p>
+      </div>
+
+      <div class="stat">
+        <p class="stat__number">15</p>
+        <p class="stat__description">Awards</p>
+      </div>
+
+      <div class="stat">
+        <p class="stat__number">99</p>
+        <p class="stat__description">Cups of Coffee</p>
+      </div>
+
+      <div class="stat">
+        <p class="stat__number">24</p>
+        <p class="stat__description">Members</p>
+      </div>
+    </section>
+
+    <section class="section__margin services">
+      <div class="services__heading">
+        <span class="heading-2__span">We work with</span><br />
+        <h2 class="heading-2">Amazing Services</h2>
+      </div>
+
+      <div class="services__service">
+        <svg class="service__icon">
+          <use xlink:href="img/symbol-defs.svg#icon-camera"></use>
+        </svg>
+        <h3 class="heading-3 service__heading">Photography</h3>
+        <p class="service__text">
+          Photography is the science, art and practice of creating durable
+          images by recording light or other electromagnetic radiation
+        </p>
+      </div>
+
+      <div class="services__service">
+        <svg class="service__icon">
+          <use xlink:href="img/symbol-defs.svg#icon-brush"></use>
+        </svg>
+        <h3 class="heading-3 service__heading">Web Design</h3>
+        <p class="service__text">
+          Web design encompasses many different skills and disciplines in the
+          production and maintenance of websites.
+        </p>
+      </div>
+
+      <div class="services__service">
+        <svg class="service__icon">
+          <use xlink:href="img/symbol-defs.svg#icon-bookmark"></use>
+        </svg>
+        <h3 class="heading-3 service__heading">Creativity</h3>
+        <p class="service__text">
+          Creativity is a phenomenon whereby something new and somehow valuable
+          is formed. The created item may be intangible or a physical object.
+        </p>
+      </div>
+
+      <div class="services__service">
+        <svg class="service__icon">
+          <use xlink:href="img/symbol-defs.svg#icon-stack"></use>
+        </svg>
+        <h3 class="heading-3 service__heading">SEO</h3>
+        <p class="service__text">
+          Search engine optimization (SEO) is the process of affecting the
+          visibility of a website or a web page in a web search engine's unpaid
+          results.
+        </p>
+      </div>
+
+      <div class="services__service">
+        <svg class="service__icon">
+          <use xlink:href="img/symbol-defs.svg#icon-display"></use>
+        </svg>
+        <h3 class="heading-3 service__heading">CSS/HTML</h3>
+        <p class="service__text">
+          HyperText Markup Language, commonly abbreviated as HTML, is the
+          standard markup language used to create web pages.
+        </p>
+      </div>
+
+      <div class="services__service">
+        <svg class="service__icon">
+          <use xlink:href="img/symbol-defs.svg#icon-cloud"></use>
+        </svg>
+        <h3 class="heading-3 service__heading">Digital</h3>
+        <p class="service__text">
+          With digital signals, system noise, provided it is not too great, will
+          not change the quantification whereas with signals handled using
+          analog processing.
+        </p>
+      </div>
+    </section>
+
+    <section class="design">
+      <div class="design__heading">
+        <span class="heading-2__span">For all devices</span><br />
+        <h2 class="heading-2">Unique Designs</h2>
+      </div>
+
+      <figure class="design__img design__tablet">
+        <img src="img/unique-design-tablet.png" alt="" />
+      </figure>
+
+      <figure class="design__img design__phone">
+        <img src="img/unique-design-phone.png" alt="" />
+      </figure>
+    </section>
+
+    <section class="what-we-do section__margin">
+      <div class="what-we-do__heading">
+        <span class="heading-2__span">Services</span><br />
+        <h2 class="heading-2">What We Do</h2>
+
+        <p class="what-we-do__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          nisi quae animi molestiae ducimus. Cupiditate neque doloribus illum
+          quo reprehenderit, odit pariatur perferendis architecto saepe, quas
+          sunt!
+        </p>
+      </div>
+
+      <figure class="what-we-do__img">
+        <img src="img/what-we-do.png" alt="" />
+      </figure>
+
+      <div class="accordion">
+        <div class="accordion__item">
+          <svg class="accordion__icon">
+            <use xlink:href="img/symbol-defs.svg#icon-camera"></use>
+          </svg>
+          <h3 class="heading-3 according__heading">Photography</h3>
+          <button class="accordion__button">
+            <svg class="accordion__btn according__heading">
+              <use
+                xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="accordion__detail">
+          <p class="accordion__text accordion__hidden">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor.
+          </p>
+        </div>
+
+        <div class="accordion__item">
+          <svg class="accordion__icon">
+            <use xlink:href="img/symbol-defs.svg#icon-brush"></use>
+          </svg>
+          <h3 class="heading-3">Creativity</h3>
+          <button class="accordion__button">
+            <svg class="accordion__btn according__heading">
+              <use
+                xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="accordion__detail">
+          <p class="accordion__text accordion__hidden">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor.
+          </p>
+        </div>
+
+        <div class="accordion__item">
+          <svg class="accordion__icon">
+            <use xlink:href="img/symbol-defs.svg#icon-laptop"></use>
+          </svg>
+          <h3 class="heading-3">Web Design</h3>
+          <button class="accordion__button">
+            <svg class="accordion__btn according__heading">
+              <use
+                xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="accordion__detail">
+          <p class="accordion__text accordion__hidden">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
