@@ -56,9 +56,16 @@ body {
   font-size: 1.4rem;
   text-transform: uppercase;
   color: $color-black;
+  justify-self: start;
 }
 
 p {
   font-family: "roboto", sans-serif;
   font-size: 1.3rem;
+}
+
+.citation {
+  font-family: "kaushan script", sans-serif;
+  color: $color-black;
+  font-size: 2rem;
 }

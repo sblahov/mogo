@@ -244,22 +244,21 @@
       </figure>
 
       <div class="accordion">
-        <div class="accordion__item">
+        <button class="accordion__button">
           <svg class="accordion__icon">
             <use xlink:href="img/symbol-defs.svg#icon-camera"></use>
           </svg>
-          <h3 class="heading-3 according__heading">Photography</h3>
-          <button class="accordion__button">
-            <svg class="accordion__btn according__heading">
-              <use
-                xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
-              ></use>
-            </svg>
-          </button>
-        </div>
+          <h3 class="heading-3">Photography</h3>
+          <svg class="accordion__btn">
+            <use
+              class="svg__link"
+              xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
+            ></use>
+          </svg>
+        </button>
 
-        <div class="accordion__detail">
-          <p class="accordion__text accordion__hidden">
+        <div class="accordion__detail detail--collapsed">
+          <p class="accordion__text">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -267,22 +266,21 @@
           </p>
         </div>
 
-        <div class="accordion__item">
+        <button class="accordion__button">
           <svg class="accordion__icon">
             <use xlink:href="img/symbol-defs.svg#icon-brush"></use>
           </svg>
           <h3 class="heading-3">Creativity</h3>
-          <button class="accordion__button">
-            <svg class="accordion__btn according__heading">
-              <use
-                xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
-              ></use>
-            </svg>
-          </button>
-        </div>
+          <svg class="accordion__btn">
+            <use
+              class="svg__link"
+              xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
+            ></use>
+          </svg>
+        </button>
 
-        <div class="accordion__detail">
-          <p class="accordion__text accordion__hidden">
+        <div class="accordion__detail detail--collapsed">
+          <p class="accordion__text">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -290,22 +288,21 @@
           </p>
         </div>
 
-        <div class="accordion__item">
+        <button class="accordion__button">
           <svg class="accordion__icon">
             <use xlink:href="img/symbol-defs.svg#icon-laptop"></use>
           </svg>
           <h3 class="heading-3">Web Design</h3>
-          <button class="accordion__button">
-            <svg class="accordion__btn according__heading">
-              <use
-                xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
-              ></use>
-            </svg>
-          </button>
-        </div>
+          <svg class="accordion__btn">
+            <use
+              class="svg__link"
+              xlink:href="img/symbol-defs.svg#icon-chevron-thin-down"
+            ></use>
+          </svg>
+        </button>
 
-        <div class="accordion__detail">
-          <p class="accordion__text accordion__hidden">
+        <div class="accordion__detail detail--collapsed">
+          <p class="accordion__text">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
             terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
             skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -314,5 +311,56 @@
         </div>
       </div>
     </section>
+
+    <section class="slider section__padding">
+        <button class="slider__btn slider__btn--left">
+          <svg class="slider__arrow">
+            <use
+              xlink:href="img/symbol-defs.svg#icon-chevron-thin-left"
+            ></use>
+        </button>
+
+      <div class="slider__slide slider__slide--1" data-slide="1">
+        <div class="slider__content">
+        <svg class="slider__icon">
+          <use
+            xlink:href="img/symbol-defs.svg#icon-chat"
+          ></use>
+          <blockquote class="slider__quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</blockquote>
+          <cite class="slider__cite citation">Jon Doe</cite>
+      </div>
+    </div>
+
+      <div class="slider__slide slider__slide--2" data-slide="2">
+        <div class="slider__content">
+          <svg class="slider__icon">
+            <use
+              xlink:href="img/symbol-defs.svg#icon-bubbles2"
+            ></use>
+            <blockquote class="slider__quote">"Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</blockquote>
+            <cite class="slider__cite citation">Jane White</cite>
+        </div>
+      </div>
+
+      <div class="slider__slide slider__slide--3" data-slide="3">
+        <div class="slider__content">
+          <svg class="slider__icon">
+            <use
+              xlink:href="img/symbol-defs.svg#icon-bubbles4"
+            ></use>
+            <blockquote class="slider__quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</blockquote>
+            <cite class="slider__cite citation">Richard Blanco</cite>
+        </div>
+      </div>
+
+        <button class="slider__btn slider__btn--right">
+          <svg class="slider__arrow">
+            <use
+              xlink:href="img/symbol-defs.svg#icon-chevron-thin-right"
+            ></use>
+        </button>
+
+    </section>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

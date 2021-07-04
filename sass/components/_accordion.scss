@@ -1,9 +1,13 @@
 .accordion {
   width: 100%;
   display: grid;
-  grid-row-gap: 1rem;
+  grid-row-gap: 1.5rem;
+  align-content: start;
 
-  &__item {
+  &__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     width: 100%;
     display: grid;
     grid-template-columns: min-content 1fr min-content;
@@ -15,12 +19,6 @@
     box-shadow: 0 2px rgba($color-gray, 0.2);
   }
 
-  &__button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-
   &__icon {
     height: 2.5rem;
     width: 2.5rem;
@@ -30,6 +28,7 @@
   &__heading {
     margin-right: auto;
     font-weight: 300;
+    text-align: left;
   }
 
   &__btn {
@@ -39,14 +38,15 @@
   }
 
   &__detail {
-    // height: 12rem;
     width: 110%;
   }
 
   &__text {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
   }
+}
 
-  &__hidden {
-    display: none;
-  }
+.detail--collapsed {
+  display: none;
 }
