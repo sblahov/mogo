@@ -1,4 +1,10 @@
 const accordion = document.querySelector(".accordion");
+const slides1 = document.querySelectorAll(".slider-1__slide");
+const btnLeft1 = document.querySelector(".slider-1__btn--left");
+const btnRight1 = document.querySelector(".slider-1__btn--right");
+const slides2 = document.querySelectorAll(".slider-2__slide");
+const btnLeft2 = document.querySelector(".slider-2__btn--left");
+const btnRight2 = document.querySelector(".slider-2__btn--right");
 
 // Expand and collapse services
 
@@ -28,11 +34,7 @@ accordion.addEventListener("click", function (e) {
 
 // Slider
 
-const slider = function () {
-  const slides = document.querySelectorAll(".slider__slide");
-  const btnLeft = document.querySelector(".slider__btn--left");
-  const btnRight = document.querySelector(".slider__btn--right");
-
+const slider = function (slides, btnLeft, btnRight) {
   console.log(slides);
 
   let curSlide = 0;
@@ -69,4 +71,5 @@ const slider = function () {
   btnRight.addEventListener("click", nextSlide);
 };
 
-slider();
+slider(slides1, btnLeft1, btnRight1);
+slider(slides2, btnLeft2, btnRight2);
