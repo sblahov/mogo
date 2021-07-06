@@ -1,0 +1,7 @@
+@mixin after-line {
+  content: "";
+  display: block;
+  background-color: $color-pink;
+  width: 5rem;
+  height: 2px;
+}

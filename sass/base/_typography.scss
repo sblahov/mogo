@@ -42,11 +42,7 @@ body {
   text-transform: uppercase;
 
   &::after {
-    content: "";
-    display: block;
-    background-color: $color-pink;
-    width: 5rem;
-    height: 2px;
+    @include after-line;
     margin: 3rem auto;
   }
 }

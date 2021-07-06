@@ -195,6 +195,46 @@ p {
   margin: 6rem auto;
   background-color: #fff; }
 
+.clients {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8rem;
+  grid-row-gap: 5rem;
+  grid-column-gap: 2rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/what-people-say-bg.png");
+  color: #8a8a8a; }
+  .clients__description {
+    grid-column: 1 / -1;
+    text-align: center; }
+
+.client {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  align-items: start;
+  justify-items: center;
+  grid-gap: 2rem; }
+  .client__img {
+    max-width: 70%;
+    border-radius: 50%; }
+  .client__name {
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem; }
+  .client__job {
+    font-style: italic; }
+    .client__job::after {
+      content: "";
+      display: block;
+      background-color: #f38181;
+      width: 5rem;
+      height: 2px;
+      margin: 1rem 0; }
+  .client__quote {
+    font-size: 9; }
+
 .design {
   position: relative;
   grid-column: full-start / full-end;

@@ -1,0 +1,56 @@
+.clients {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8rem;
+  grid-row-gap: 5rem;
+  grid-column-gap: 2rem;
+  background-image: linear-gradient(
+      rgba($color-white, 0.9),
+      rgba($color-white, 0.9)
+    ),
+    url("../img/what-people-say-bg.png");
+  color: #8a8a8a;
+
+  &__description {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}
+
+.client {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  align-items: start;
+  justify-items: center;
+  grid-gap: 2rem;
+
+  &__img {
+    max-width: 70%;
+    border-radius: 50%;
+  }
+
+  &__testimonial {
+  }
+
+  &__name {
+    color: $color-black;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__job {
+    font-style: italic;
+
+    &::after {
+      @include after-line;
+      margin: 1rem 0;
+    }
+  }
+
+  &__quote {
+    font-size: 9;
+  }
+}
