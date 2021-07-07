@@ -1,0 +1,169 @@
+.footer {
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-column-gap: 1.8rem;
+  grid-template-columns: repeat(2, 1fr) min-content;
+
+  margin-top: 3rem;
+
+  &__about {
+  }
+
+  &__logo {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  &__about-text {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    width: 97%;
+    margin: 1rem 0;
+  }
+
+  &__followers {
+    color: $color-black;
+    font-size: 1.3rem;
+
+    &--number {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  }
+
+  &__socials {
+    list-style: none;
+    font-size: 1.4rem;
+  }
+
+  &__social {
+    margin: 0.8rem 0 1.3rem 0;
+    display: inline-block;
+    margin-right: 0.8rem;
+    fill: $color-blue;
+    transition: all 0.2s;
+
+    &--link {
+      &:hover,
+      &:active {
+        fill: $color-blue-dark;
+      }
+    }
+
+    &--icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__email-box {
+    font-family: inherit;
+    color: $color-gray-dark;
+    padding: 1rem 0;
+    border: 1px solid $color-gray;
+
+    &:focus {
+      outline: none;
+      -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-blue-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-gray-dark;
+    }
+  }
+
+  &__btn--submit {
+    border: none;
+    padding: 1.1rem 1rem;
+    text-transform: uppercase;
+    color: $color-white;
+    font-weight: bold;
+    background-color: $color-blue;
+    margin-left: -4px;
+    cursor: pointer;
+    transform: translateY(1px);
+    transition: all 0.2s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-blue-dark;
+    }
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 1rem 0 3rem 0;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+
+  &__blog {
+    display: grid;
+    grid-template-rows: min-content repeat(3, 1fr);
+    grid-row-gap: 0.8rem;
+
+    &--item {
+      width: 100%;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 1.5rem;
+      align-content: start;
+      text-decoration: none;
+    }
+
+    &--img {
+      grid-row: 1 / -1;
+      grid-column: 1 / 2;
+      max-width: 95%;
+    }
+
+    &--title {
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $color-black;
+    }
+
+    &--date {
+      color: $color-gray;
+    }
+  }
+
+  &__instagram {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+
+    h2 {
+      grid-column: 1 / -1;
+    }
+
+    &--link {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: $color-gray;
+      grid-column: 1 /-1;
+      transition: all 0.2s;
+      padding-bottom: 0.5rem;
+
+      &:hover,
+      &:active {
+        color: $color-black;
+      }
+    }
+  }
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  margin: 4rem 0;
+  &__text {
+    text-align: center;
+  }
+}
