@@ -15,9 +15,13 @@
   }
 
   &__description {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin-bottom: 4rem;
     text-align: center;
     text-transform: uppercase;
+
+    @include respond(big-desktop) {
+      font-size: 1.3rem;
+    }
   }
 }

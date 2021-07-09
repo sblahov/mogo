@@ -8,7 +8,7 @@
   width: 100%;
   max-height: 100rem;
   margin: 0 auto;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__btn {
     background-color: transparent;
@@ -71,6 +71,7 @@
   &__img {
     max-width: 100%;
     border-radius: 50%;
+    display: block;
   }
 
   &__icon {
@@ -89,6 +90,10 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-style: italic;
+
+    @include respond(big-desktop) {
+      margin-top: 1rem;
+    }
   }
 
   &__cite {

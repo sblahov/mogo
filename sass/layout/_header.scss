@@ -19,7 +19,7 @@
   grid-row: 1 / 2;
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 15% 1fr 1fr 15%;
+  grid-template-columns: 10% 1fr 1fr 10%;
   align-items: center;
   margin: 2.5rem 0;
 
@@ -69,10 +69,15 @@
     }
   }
 }
+
 .hero-area {
   grid-column: 1 / -1;
   text-align: center;
   margin: 3rem;
+
+  @include respond(big-desktop) {
+    margin: 5rem;
+  }
 }
 
 .btn {

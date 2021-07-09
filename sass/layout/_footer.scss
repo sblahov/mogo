@@ -6,9 +6,6 @@
 
   margin-top: 3rem;
 
-  &__about {
-  }
-
   &__logo {
     font-size: 4rem;
     font-weight: 700;
@@ -34,6 +31,10 @@
   &__socials {
     list-style: none;
     font-size: 1.4rem;
+
+    @include respond(big-desktop) {
+      margin: 0.5rem 0;
+    }
   }
 
   &__social {
@@ -42,6 +43,10 @@
     margin-right: 0.8rem;
     fill: $color-blue;
     transition: all 0.2s;
+
+    @include respond(big-desktop) {
+      margin-right: 1.1rem;
+    }
 
     &--link {
       &:hover,
@@ -53,6 +58,11 @@
     &--icon {
       width: 1.5rem;
       height: 1.5rem;
+
+      @include respond(big-desktop) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 
@@ -61,6 +71,10 @@
     color: $color-gray-dark;
     padding: 1rem 0;
     border: 1px solid $color-gray;
+
+    @include respond(big-desktop) {
+      padding: 1.3rem;
+    }
 
     &:focus {
       outline: none;
@@ -85,6 +99,11 @@
     cursor: pointer;
     transform: translateY(1px);
     transition: all 0.2s;
+
+    @include respond(big-desktop) {
+      padding: 1.4rem 1rem;
+      transform: translateY(0);
+    }
 
     &:focus,
     &:hover,

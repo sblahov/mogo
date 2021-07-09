@@ -4,6 +4,10 @@
   grid-row-gap: 1.5rem;
   align-content: start;
 
+  @include respond(big-desktop) {
+    grid-row-gap: 3.5rem;
+  }
+
   &__button {
     background-color: transparent;
     border: none;
