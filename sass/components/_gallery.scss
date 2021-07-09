@@ -1,21 +1,4 @@
 .gallery {
-  margin-top: 8rem;
-  grid-column: full-start / full-end;
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  justify-items: center;
-
-  &__description {
-    text-align: center;
-    grid-column: 1 / -1;
-    margin-bottom: 4rem;
-  }
-
-  &__text {
-    width: 80%;
-    margin: 0 auto;
-  }
-
   &__cards {
     grid-template-columns: 1 / -1;
     display: grid;

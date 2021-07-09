@@ -7,21 +7,17 @@
 @import "base/utilities";
 
 @import "components/accordion";
+@import "components/blog";
+@import "components/client";
+@import "components/gallery";
+@import "components/service";
 @import "components/slider";
+@import "components/story";
+@import "components/stat";
+@import "components/team-card";
 
-@import "layout/blog";
-@import "layout/clients";
-@import "layout/design";
 @import "layout/footer";
-@import "layout/gallery";
 @import "layout/grid";
 @import "layout/header";
-@import "layout/logos";
-@import "layout/map";
-@import "layout/services";
-@import "layout/stats";
-@import "layout/story";
-@import "layout/team";
-@import "layout/what-we-do";
 
 @import "pages/home";

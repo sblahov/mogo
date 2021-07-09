@@ -1,0 +1,214 @@
+.story {
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-column-gap: 2rem;
+
+  &__description {
+    @include center-grid-row;
+    margin-bottom: 4rem;
+  }
+}
+
+.stats {
+  grid-column: full-start / full-end;
+  padding: 0 15%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: $color-blue;
+  color: $color-white;
+}
+
+.services {
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 5rem;
+
+  &__description {
+    @include center-grid-row;
+  }
+}
+
+.design {
+  position: relative;
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+      rgba($color-white, 0.6),
+      rgba($color-white, 0.6)
+    ),
+    url(../img/unique-design-bg.png);
+  padding-top: 6rem;
+  margin-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__description {
+    @include center-grid-row;
+  }
+
+  &__img {
+    display: inline-block;
+
+    margin: 0 auto;
+    img {
+      max-width: 60%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__phone {
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    transform: translateY(20%);
+  }
+}
+
+.what-we-do {
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-rows: min-content minmax(min-content, max-content);
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3rem;
+  grid-column-gap: 4rem;
+
+  &__description {
+    @include center-grid-row;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.team {
+  grid-column: content-start / content-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__description {
+    @include center-grid-row;
+    margin-bottom: 4rem;
+  }
+
+  &__members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+
+.logos {
+  grid-column: full-start / full-end;
+  background-color: $color-gray-light;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__img {
+    max-width: 80%;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.gallery {
+  margin-top: 8rem;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  justify-items: center;
+
+  &__description {
+    @include center-grid-row;
+    margin-bottom: 4rem;
+  }
+
+  &__text {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.clients {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8rem;
+  grid-row-gap: 5rem;
+  grid-column-gap: 2rem;
+  background-image: linear-gradient(
+      rgba($color-white, 0.9),
+      rgba($color-white, 0.9)
+    ),
+    url("../img/what-people-say-bg.png");
+  color: #8a8a8a;
+
+  &__description {
+    @include center-grid-row;
+  }
+}
+
+.blog {
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3rem;
+  grid-row-gap: 4rem;
+
+  &__description {
+    @include center-grid-row;
+  }
+}
+
+.map {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-white, 0.8),
+      rgba($color-white, 0.8)
+    ),
+    url(../img/map-bg.png);
+  padding: 4rem;
+  text-align: center;
+  line-height: 1;
+
+  &__link {
+    text-decoration: none;
+    color: $color-pink;
+    fill: $color-pink;
+
+    &:hover,
+    &:active {
+      color: $color-pink-dark-2;
+      fill: $color-pink-dark-2;
+    }
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__heading {
+    margin: 1rem auto;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+}

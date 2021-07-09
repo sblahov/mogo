@@ -13,3 +13,8 @@
 .section__padding--small {
   padding: 5rem;
 }
+
+.section__description {
+  grid-column: 1 / -1;
+  text-align: center;
+}

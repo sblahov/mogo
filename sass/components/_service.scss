@@ -1,0 +1,14 @@
+.service {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 0.7rem;
+
+  &__icon {
+    height: 2.7rem;
+    width: 2.7rem;
+    grid-row: 1 / span 2;
+    fill: $color-blue;
+    transform: translateY(-2px);
+  }
+}

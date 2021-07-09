@@ -1,21 +1,5 @@
-.team {
-  grid-column: content-start / content-end;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  &__description {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  &__members {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 2rem;
-  }
-
-  &__card {
+.team-card {
+  &__picture {
     display: grid;
     transition: all 0.5s;
 
