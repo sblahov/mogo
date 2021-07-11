@@ -91,6 +91,9 @@ p {
   @media only screen and (min-width: 112.5em) {
     p {
       font-size: 1.5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    p {
+      font-size: 1.6rem; } }
 
 .citation {
   font-family: "kaushan script", sans-serif;
@@ -99,9 +102,15 @@ p {
 
 .section__margin {
   margin: 8rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .section__margin {
+      margin: 4rem 0; } }
 
 .section__margin--small {
   margin: 4rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .section__margin--small {
+      margin: 2rem 0; } }
 
 .section__padding {
   padding: 8rem 0; }
@@ -116,8 +125,11 @@ p {
 .accordion {
   width: 100%;
   display: grid;
-  grid-row-gap: 1.5rem;
+  grid-row-gap: 3rem;
   align-content: start; }
+  @media only screen and (max-width: 56.25em) {
+    .accordion {
+      width: 90%; } }
   @media only screen and (min-width: 112.5em) {
     .accordion {
       grid-row-gap: 3.5rem; } }
@@ -155,6 +167,9 @@ p {
 .detail--collapsed {
   display: none; }
 
+.blog__card {
+  align-self: center; }
+
 .blog__link {
   text-decoration: none; }
 
@@ -172,17 +187,34 @@ p {
   background-color: #95e1d3;
   padding: 1.1rem 1.4rem;
   transform: translateX(-0.5rem); }
+  @media only screen and (max-width: 56.25em) {
+    .blog__caption {
+      padding: 1.3rem 1.7rem;
+      left: 20%; } }
+  @media screen and (max-width: 46.875em) {
+    .blog__caption {
+      left: 15%; } }
 
 .blog__date {
   display: block;
   font-weight: 700;
   font-size: 2.2rem;
   line-height: 1.2; }
+  @media only screen and (max-width: 56.25em) {
+    .blog__date {
+      font-size: 5rem;
+      display: inline-block;
+      margin-right: 0.5rem; } }
 
 .blog__month {
   display: block;
   font-size: 1.3rem;
   font-style: italic; }
+  @media only screen and (max-width: 56.25em) {
+    .blog__month {
+      font-size: 3rem;
+      display: inline-block;
+      font-style: normal; } }
 
 .blog__details {
   margin: 1.5rem 0; }
@@ -191,6 +223,10 @@ p {
   text-transform: uppercase;
   font-size: 1.3rem;
   margin-bottom: 1rem; }
+  @media only screen and (max-width: 56.25em) {
+    .blog__title {
+      font-size: 2rem;
+      margin-top: 2rem; } }
   .blog__title a:link,
   .blog__title a:visited {
     text-decoration: none;
@@ -203,6 +239,9 @@ p {
 .blog__text {
   font-size: 1.3rem;
   padding-bottom: 1rem; }
+  @media only screen and (max-width: 56.25em) {
+    .blog__text {
+      font-size: 1.5rem; } }
 
 .blog__stats {
   list-style: none; }
@@ -226,6 +265,10 @@ p {
   height: 1.4rem;
   width: 1.4rem;
   margin-right: 0.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .blog__icon {
+      height: 2rem;
+      width: 2rem; } }
 
 .client {
   display: grid;
@@ -342,7 +385,8 @@ p {
   position: relative;
   width: 100%;
   max-height: 100rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
   .slider__btn {
     background-color: transparent;
     border: none;
@@ -353,10 +397,18 @@ p {
     top: 50%;
     left: 10%;
     cursor: pointer; }
+    @media only screen and (max-width: 56.25em) {
+      .slider__btn--left {
+        top: 40%;
+        left: 5%; } }
   .slider__btn--right {
     position: absolute;
     top: 50%;
     right: 10%; }
+    @media only screen and (max-width: 56.25em) {
+      .slider__btn--right {
+        top: 40%;
+        right: 5%; } }
   .slider__arrow {
     height: 2.5rem;
     width: 2.5rem;
@@ -372,13 +424,19 @@ p {
     display: grid;
     grid-template-columns: 20% 1fr;
     grid-template-rows: 1fr, min-content;
-    grid-column-gap: 0rem;
+    grid-column-gap: 0.7rem;
     align-self: center;
     margin-top: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .slider__content {
+        width: 85%; } }
   .slider__picture {
     width: 60%;
     grid-row: 1 / 3;
     grid-column: 1 / 2; }
+    @media only screen and (max-width: 56.25em) {
+      .slider__picture {
+        margin-left: 3rem; } }
   .slider__img {
     max-width: 100%;
     border-radius: 50%;
@@ -400,13 +458,20 @@ p {
     @media only screen and (min-width: 112.5em) {
       .slider__quote {
         margin-top: 1rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .slider__quote {
+        font-size: 1.3rem; } }
   .slider__cite::before {
     content: "";
     display: inline-block;
     width: 2rem;
     height: 3px;
     background-color: #f38181;
-    transform: translateY(-0.5rem); }
+    transform: translateY(-0.5rem);
+    margin-left: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .slider__cite::before {
+        height: 2px; } }
 
 .slider-2 {
   margin: 6rem auto;
@@ -454,11 +519,19 @@ p {
     width: 2rem;
     fill: currentColor;
     align-self: end; }
+    @media only screen and (max-width: 56.25em) {
+      .story__caption--icon {
+        height: 5rem;
+        width: 5rem;
+        margin-bottom: 1rem; } }
   .story__caption--text {
     font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .story__caption--text {
+        font-size: 1.8rem; } }
 
 .stat {
   font-weight: 700;
@@ -471,13 +544,13 @@ p {
     text-align: center;
     font-size: 6rem; }
   .stat__description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 4rem;
     text-align: center;
     text-transform: uppercase; }
     @media only screen and (min-width: 112.5em) {
       .stat__description {
-        font-size: 1.3rem; } }
+        font-size: 1.4rem; } }
 
 .team-card__picture {
   display: grid;
@@ -503,6 +576,10 @@ p {
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0), rgba(252, 227, 138, 0)); }
+  @media only screen and (hover: none) {
+    .team-card__overlay {
+      grid-row: 2 / 3;
+      margin-top: 1rem; } }
   .team-card__overlay:hover {
     color: white;
     background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)); }
@@ -517,6 +594,11 @@ p {
   justify-content: center;
   z-index: 10;
   display: none; }
+  @media only screen and (hover: none) {
+    .team-card__social {
+      display: visible; }
+      .team-card__social :not(last-of-type) {
+        margin-right: 0.5rem; } }
 
 .team-card__social-item {
   display: inline-block;
@@ -529,7 +611,12 @@ p {
   padding: 1rem;
   fill: #f38181;
   background-color: #fce38a;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  border-radius: 2px; }
+  @media only screen and (max-width: 56.25em) {
+    .team-card__social-icon {
+      height: 3rem;
+      width: 3rem; } }
   .team-card__social-icon:hover {
     fill: #fce38a;
     background-color: #f38181; }
@@ -550,6 +637,16 @@ p {
   grid-column-gap: 1.8rem;
   grid-template-columns: repeat(2, 1fr) min-content;
   margin-top: 3rem; }
+  @media only screen and (max-width: 75em) {
+    .footer {
+      grid-template-columns: 1fr min-content;
+      grid-column-gap: 2.5rem; } }
+  @media only screen and (max-width: 75em) {
+    .footer__about {
+      grid-column: 1 / -1;
+      border-bottom: 1px solid #acacac;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem; } }
   .footer__logo {
     font-size: 4rem;
     font-weight: 700; }
@@ -634,7 +731,7 @@ p {
       width: 100%;
       display: grid;
       grid-template-columns: max-content 1fr;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(2, min-content);
       grid-column-gap: 1.5rem;
       align-content: start;
       text-decoration: none; }
@@ -676,6 +773,9 @@ p {
   display: grid;
   grid-template-rows: 100vh repeat(4, min-content);
   grid-template-columns: [full-start] 10% [content-start] 1fr [content-middle] 1fr [content-end] 10% [full-end]; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      grid-template-columns: [full-start] 5% [content-start] 1fr [content-middle] 1fr [content-end] 5% [full-end]; } }
 
 .header {
   background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url(../img/hero.png);
@@ -693,16 +793,29 @@ p {
   grid-template-columns: 10% 1fr 1fr 10%;
   align-items: center;
   margin: 2.5rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .nav {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, min-content); } }
   .nav__logo {
     display: inline-block;
     font-size: 2.5rem;
     font-weight: 700;
     grid-column: 2 / 3; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__logo {
+        text-align: center;
+        grid-column: 1 / -1;
+        font-size: 3rem; } }
   .nav__navigation {
     list-style: none;
     grid-column: 3 / 4;
     display: flex;
     justify-content: space-around; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__navigation {
+        grid-column: 1 / -1;
+        margin: 2rem 8rem; } }
   .nav__item {
     display: inline-block; }
   .nav__link:link, .nav__link:visited {
@@ -713,6 +826,9 @@ p {
     border-bottom: 2px solid transparent;
     font-size: 1.4rem;
     padding-bottom: 0.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__link:link, .nav__link:visited {
+        font-size: 1.6rem; } }
   .nav__link:active, .nav__link:hover {
     color: #fce38a;
     border-bottom: 2px solid #fce38a; }
@@ -731,6 +847,9 @@ p {
   @media only screen and (min-width: 112.5em) {
     .hero-area {
       margin: 5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .hero-area {
+      margin: 10rem; } }
 
 .btn {
   border: none;
@@ -758,11 +877,24 @@ p {
     grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .story__description {
+        font-size: 1.7rem; } }
   .story__row {
     display: flex;
     justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .story__row {
+        flex-direction: column;
+        align-items: center; } }
     .story__row > *:not(last-child) {
       margin-right: 1rem; }
+      @media only screen and (max-width: 75em) {
+        .story__row > *:not(last-child) {
+          margin-right: 2rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .story__row > *:not(last-child) {
+          margin-bottom: 7rem; } }
 
 .stats {
   grid-column: full-start / full-end;
@@ -771,6 +903,9 @@ p {
   grid-template-columns: repeat(5, 1fr);
   background-color: #95e1d3;
   color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .stats {
+      padding: 0; } }
 
 .services {
   grid-column: content-start / content-end;
@@ -778,9 +913,15 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .services {
+      margin: 0 5rem 5rem 5rem; } }
   .services__description {
     grid-column: 1 / -1;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .services__description {
+        font-size: 1.7rem; } }
 
 .design {
   position: relative;
@@ -794,6 +935,9 @@ p {
   .design__description {
     grid-column: 1 / -1;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .design__description {
+        font-size: 1.7rem; } }
   .design__img {
     display: inline-block;
     margin: 0 auto; }
@@ -801,11 +945,18 @@ p {
       max-width: 60%;
       display: block;
       margin: 0 auto; }
+      @media only screen and (max-width: 56.25em) {
+        .design__img img {
+          max-width: 45%; } }
   .design__phone {
     position: absolute;
     bottom: 0;
     right: 25%;
     transform: translateY(20%); }
+    @media only screen and (max-width: 56.25em) {
+      .design__phone {
+        max-width: 90%;
+        right: 10%; } }
 
 .what-we-do {
   grid-column: content-start / content-end;
@@ -814,10 +965,16 @@ p {
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3rem;
   grid-column-gap: 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .what-we-do {
+      grid-template-columns: 1fr; } }
   .what-we-do__description {
     grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .what-we-do__description {
+        font-size: 1.7rem; } }
   .what-we-do__img img {
     max-width: 100%; }
 
@@ -830,19 +987,32 @@ p {
     grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .team__description {
+        font-size: 1.7rem; } }
   .team__members {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .team__members {
+        flex-direction: column;
+        align-items: center; } }
     .team__members > *:not(last-child) {
       margin-right: 2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .team__members > *:not(last-child) {
+          margin-bottom: 3rem; } }
 
 .logos {
   grid-column: full-start / full-end;
   background-color: #f8f8f8;
   display: grid;
   grid-template-columns: repeat(6, 1fr); }
+  @media only screen and (max-width: 56.25em) {
+    .logos {
+      grid-template-columns: repeat(3, 1fr); } }
   .logos__link {
     text-decoration: none; }
   .logos__img {
@@ -861,6 +1031,9 @@ p {
     grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__description {
+        font-size: 1.7rem; } }
   .gallery__text {
     width: 80%;
     margin: 0 auto; }
@@ -877,9 +1050,16 @@ p {
   @media only screen and (min-width: 112.5em) {
     .clients {
       grid-row-gap: 2rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .clients {
+      grid-template-columns: 1fr;
+      padding: 4rem; } }
   .clients__description {
     grid-column: 1 / -1;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .clients__description {
+        font-size: 1.7rem; } }
 
 .blog {
   grid-column: content-start / content-end;
@@ -887,9 +1067,16 @@ p {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .blog {
+      grid-template-columns: 1fr;
+      text-align: center; } }
   .blog__description {
     grid-column: 1 / -1;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .blog__description {
+        font-size: 1.7rem; } }
 
 .map {
   grid-column: full-start / full-end;

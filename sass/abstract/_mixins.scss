@@ -9,6 +9,10 @@
 @mixin center-grid-row {
   grid-column: 1 / -1;
   text-align: center;
+
+  @include respond(tab-port) {
+    font-size: 1.7rem;
+  }
 }
 
 // BREAKPOINT MANAGER

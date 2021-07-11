@@ -1,9 +1,17 @@
 .section__margin {
   margin: 8rem 0;
+
+  @include respond(tab-port) {
+    margin: 4rem 0;
+  }
 }
 
 .section__margin--small {
   margin: 4rem 0;
+
+  @include respond(tab-port) {
+    margin: 2rem 0;
+  }
 }
 
 .section__padding {

@@ -1,8 +1,12 @@
 .accordion {
   width: 100%;
   display: grid;
-  grid-row-gap: 1.5rem;
+  grid-row-gap: 3rem;
   align-content: start;
+
+  @include respond(tab-port) {
+    width: 90%;
+  }
 
   @include respond(big-desktop) {
     grid-row-gap: 3.5rem;

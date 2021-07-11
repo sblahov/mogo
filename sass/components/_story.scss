@@ -59,6 +59,12 @@
       width: 2rem;
       fill: currentColor;
       align-self: end;
+
+      @include respond(tab-port) {
+        height: 5rem;
+        width: 5rem;
+        margin-bottom: 1rem;
+      }
     }
 
     &--text {
@@ -66,6 +72,10 @@
       font-weight: bold;
       text-transform: uppercase;
       margin-top: 1rem;
+
+      @include respond(tab-port) {
+        font-size: 1.8rem;
+      }
     }
   }
 }

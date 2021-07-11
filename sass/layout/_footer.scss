@@ -3,8 +3,21 @@
   display: grid;
   grid-column-gap: 1.8rem;
   grid-template-columns: repeat(2, 1fr) min-content;
-
   margin-top: 3rem;
+
+  @include respond(tab-land) {
+    grid-template-columns: 1fr min-content;
+    grid-column-gap: 2.5rem;
+  }
+
+  &__about {
+    @include respond(tab-land) {
+      grid-column: 1 / -1;
+      border-bottom: 1px solid $color-gray;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
 
   &__logo {
     font-size: 4rem;
@@ -129,7 +142,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: max-content 1fr;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(2, min-content);
       grid-column-gap: 1.5rem;
       align-content: start;
       text-decoration: none;
