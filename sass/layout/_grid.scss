@@ -1,9 +1,13 @@
 .container {
   display: grid;
-  grid-template-rows: 100vh repeat(4, min-content);
+  grid-template-rows: 100vh;
   grid-template-columns: [full-start] 10% [content-start] 1fr [content-middle] 1fr [content-end] 10% [full-end];
 
   @include respond(tab-port) {
     grid-template-columns: [full-start] 5% [content-start] 1fr [content-middle] 1fr [content-end] 5% [full-end];
+  }
+
+  @include respond(phone) {
+    grid-template-rows: 70vh;
   }
 }

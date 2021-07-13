@@ -41,6 +41,9 @@ body {
     .header-1 {
       margin: 4rem;
       font-size: 10rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header-1 {
+      font-size: 4rem; } }
 
 .header__span {
   font-family: "kaushan script", sans-serif;
@@ -49,6 +52,9 @@ body {
   @media only screen and (min-width: 112.5em) {
     .header__span {
       font-size: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header__span {
+      font-size: 3rem; } }
 
 .heading-2__span {
   font-family: "kaushan script", sans-serif;
@@ -59,6 +65,9 @@ body {
     .heading-2__span {
       font-size: 3.5rem;
       margin: 0.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-2__span {
+      font-size: 2rem; } }
 
 .heading-2 {
   color: #000;
@@ -74,6 +83,11 @@ body {
   @media only screen and (min-width: 112.5em) {
     .heading-2 {
       font-size: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-2 {
+      font-size: 2.5rem; }
+      .heading-2::after {
+        margin: 2rem auto; } }
 
 .heading-3 {
   font-weight: 700;
@@ -99,6 +113,9 @@ p {
   font-family: "kaushan script", sans-serif;
   color: #000;
   font-size: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .citation {
+      font-size: 1.5rem; } }
 
 .section__margin {
   margin: 8rem 0; }
@@ -127,12 +144,14 @@ p {
   display: grid;
   grid-row-gap: 3rem;
   align-content: start; }
-  @media only screen and (max-width: 56.25em) {
-    .accordion {
-      width: 90%; } }
   @media only screen and (min-width: 112.5em) {
     .accordion {
       grid-row-gap: 3.5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .accordion {
+      width: 90%;
+      margin: 0 auto;
+      justify-items: center; } }
   .accordion__button {
     background-color: transparent;
     border: none;
@@ -146,6 +165,10 @@ p {
     border: 1px solid #acacac;
     border-radius: 2px;
     box-shadow: 0 2px rgba(172, 172, 172, 0.2); }
+    @media only screen and (max-width: 56.25em) {
+      .accordion__button {
+        width: 80%;
+        justify-self: center; } }
   .accordion__icon {
     height: 2.5rem;
     width: 2.5rem;
@@ -163,9 +186,19 @@ p {
   .accordion__text {
     font-size: 1.4rem;
     margin-left: 0.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .accordion__text {
+        width: 75%;
+        margin: 0 auto; } }
 
 .detail--collapsed {
   display: none; }
+
+@media only screen and (max-width: 56.25em) {
+  .blog {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; } }
 
 .blog__card {
   align-self: center; }
@@ -176,6 +209,12 @@ p {
 .blog__img {
   width: 100%;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .blog__img {
+      margin-bottom: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .blog__img {
+      margin-bottom: 3rem; } }
   .blog__img img {
     max-width: 100%; }
 
@@ -189,11 +228,9 @@ p {
   transform: translateX(-0.5rem); }
   @media only screen and (max-width: 56.25em) {
     .blog__caption {
-      padding: 1.3rem 1.7rem;
-      left: 20%; } }
-  @media screen and (max-width: 46.875em) {
-    .blog__caption {
-      left: 15%; } }
+      left: 50%;
+      transform: translate(-50%, 10px);
+      bottom: 0; } }
 
 .blog__date {
   display: block;
@@ -205,6 +242,9 @@ p {
       font-size: 5rem;
       display: inline-block;
       margin-right: 0.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .blog__date {
+      font-size: 3rem; } }
 
 .blog__month {
   display: block;
@@ -215,6 +255,9 @@ p {
       font-size: 3rem;
       display: inline-block;
       font-style: normal; } }
+  @media only screen and (max-width: 37.5em) {
+    .blog__month {
+      font-size: 1.7rem; } }
 
 .blog__details {
   margin: 1.5rem 0; }
@@ -227,6 +270,9 @@ p {
     .blog__title {
       font-size: 2rem;
       margin-top: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .blog__title {
+      font-size: 1.8rem; } }
   .blog__title a:link,
   .blog__title a:visited {
     text-decoration: none;
@@ -273,18 +319,36 @@ p {
 .client {
   display: grid;
   grid-template-columns: 25% 1fr;
+  grid-template-rows: repeat(2, min-content);
   align-items: start;
   justify-items: center;
-  grid-gap: 2rem; }
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem; }
+  @media only screen and (max-width: 28.125em) {
+    .client {
+      margin-bottom: 2rem;
+      grid-template-columns: 25% 1fr; } }
   .client__img {
     max-width: 70%;
-    border-radius: 50%; }
+    border-radius: 50%;
+    grid-row: 1 / -1;
+    grid-column: 1 / 2; }
+    @media only screen and (max-width: 28.125em) {
+      .client__img {
+        grid-row: 1 / 2; } }
+  .client__testimonial {
+    grid-row: 1 / 2;
+    grid-column: 2/ 3;
+    justify-self: start; }
   .client__name {
     color: #000;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 1.5rem;
     margin-bottom: 0.8rem; }
+    @media only screen and (max-width: 28.125em) {
+      .client__name {
+        margin-bottom: 3px; } }
   .client__job {
     font-style: italic; }
     .client__job::after {
@@ -294,8 +358,17 @@ p {
       width: 5rem;
       height: 2px;
       margin: 1rem 0; }
+      @media only screen and (max-width: 28.125em) {
+        .client__job::after {
+          margin: 0.5rem 0;
+          font-size: 1.2rem; } }
   .client__quote {
-    font-size: 9; }
+    font-size: 1.5rem;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; }
+    @media only screen and (max-width: 28.125em) {
+      .client__quote {
+        grid-column: 1 / -1; } }
 
 .gallery__cards {
   grid-template-columns: 1 / -1;
@@ -357,24 +430,41 @@ p {
     width: 2rem;
     height: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .gallery__caption--icon {
+        width: 1.5rem;
+        height: 1.5rem; } }
   .gallery__caption--text {
     font-family: "montserrat", sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
     text-transform: uppercase;
     margin-top: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .gallery__caption--text {
+        font-size: 1.2rem;
+        text-align: center; } }
 
 .service {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 0.7rem; }
+  @media only screen and (max-width: 56.25em) {
+    .service {
+      grid-column-gap: 3rem; } }
+  .service__heading {
+    font-size: 1.8rem; }
   .service__icon {
     height: 2.7rem;
     width: 2.7rem;
     grid-row: 1 / span 2;
     fill: #95e1d3;
     transform: translateY(-2px); }
+    @media only screen and (max-width: 56.25em) {
+      .service__icon {
+        height: 3rem;
+        width: 3rem; } }
 
 .slider {
   grid-column: full-start / full-end;
@@ -401,6 +491,10 @@ p {
       .slider__btn--left {
         top: 40%;
         left: 5%; } }
+    @media only screen and (max-width: 37.5em) {
+      .slider__btn--left {
+        top: 50%;
+        left: 3%; } }
   .slider__btn--right {
     position: absolute;
     top: 50%;
@@ -409,6 +503,10 @@ p {
       .slider__btn--right {
         top: 40%;
         right: 5%; } }
+    @media only screen and (max-width: 37.5em) {
+      .slider__btn--right {
+        top: 50%;
+        right: 3%; } }
   .slider__arrow {
     height: 2.5rem;
     width: 2.5rem;
@@ -450,6 +548,12 @@ p {
     padding: 2rem;
     border: 2px solid #95e1d3;
     margin-left: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .slider__icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 1rem;
+        margin-top: 1.3rem; } }
   .slider__quote {
     width: 100%;
     margin-bottom: 1rem;
@@ -461,6 +565,10 @@ p {
     @media only screen and (max-width: 56.25em) {
       .slider__quote {
         font-size: 1.3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .slider__quote {
+        font-size: 1.3rem;
+        margin-bottom: 3px; } }
   .slider__cite::before {
     content: "";
     display: inline-block;
@@ -476,6 +584,15 @@ p {
 .slider-2 {
   margin: 6rem auto;
   background-color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .slider-2 {
+      margin: 3rem auto; } }
+
+@media only screen and (max-width: 37.5em) {
+  .story {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; } }
 
 .story__link:link, .story__link:visited {
   text-decoration: none;
@@ -524,6 +641,11 @@ p {
         height: 5rem;
         width: 5rem;
         margin-bottom: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .story__caption--icon {
+        height: 3rem;
+        width: 3rem;
+        margin-bottom: 0.7rem; } }
   .story__caption--text {
     font-size: 1.4rem;
     font-weight: bold;
@@ -532,17 +654,26 @@ p {
     @media only screen and (max-width: 56.25em) {
       .story__caption--text {
         font-size: 1.8rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .story__caption--text {
+        font-size: 1.5rem; } }
 
 .stat {
   font-weight: 700;
   padding: 2rem;
   border-right: 1px solid #fff; }
+  @media only screen and (max-width: 37.5em) {
+    .stat {
+      padding: 0.5rem; } }
   .stat:first-child {
     border-left: 1px solid #fff; }
   .stat__number {
     margin-top: 4rem;
     text-align: center;
     font-size: 6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .stat__number {
+        font-size: 3rem; } }
   .stat__description {
     font-size: 1.2rem;
     margin-bottom: 4rem;
@@ -551,6 +682,13 @@ p {
     @media only screen and (min-width: 112.5em) {
       .stat__description {
         font-size: 1.4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .stat__description {
+        font-size: 1rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .team-card {
+    width: 60%; } }
 
 .team-card__picture {
   display: grid;
@@ -589,14 +727,11 @@ p {
 
 .team-card__social {
   list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 10;
   display: none; }
   @media only screen and (hover: none) {
     .team-card__social {
-      display: visible; }
+      display: flex; }
       .team-card__social :not(last-of-type) {
         margin-right: 0.5rem; } }
 
@@ -641,6 +776,10 @@ p {
     .footer {
       grid-template-columns: 1fr min-content;
       grid-column-gap: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      grid-template-columns: 1fr;
+      grid-row-gap: 2rem; } }
   @media only screen and (max-width: 75em) {
     .footer__about {
       grid-column: 1 / -1;
@@ -723,10 +862,18 @@ p {
     margin: 1rem 0 3rem 0;
     text-transform: uppercase;
     color: #000; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__heading {
+        font-size: 2rem;
+        text-align: center;
+        margin: 1rem 0 2rem 0; } }
   .footer__blog {
     display: grid;
     grid-template-rows: min-content repeat(3, 1fr);
     grid-row-gap: 0.8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__blog {
+        grid-row-gap: 2rem; } }
     .footer__blog--item {
       width: 100%;
       display: grid;
@@ -744,12 +891,18 @@ p {
       font-weight: 400;
       text-transform: uppercase;
       color: #000; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__blog--title {
+          font-size: 1.4rem; } }
     .footer__blog--date {
       color: #acacac; }
   .footer__instagram {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2px; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__instagram {
+        justify-self: center; } }
     .footer__instagram h2 {
       grid-column: 1 / -1; }
     .footer__instagram--link {
@@ -771,11 +924,14 @@ p {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh repeat(4, min-content);
+  grid-template-rows: 100vh;
   grid-template-columns: [full-start] 10% [content-start] 1fr [content-middle] 1fr [content-end] 10% [full-end]; }
   @media only screen and (max-width: 56.25em) {
     .container {
       grid-template-columns: [full-start] 5% [content-start] 1fr [content-middle] 1fr [content-end] 5% [full-end]; } }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      grid-template-rows: 70vh; } }
 
 .header {
   background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url(../img/hero.png);
@@ -811,7 +967,8 @@ p {
     list-style: none;
     grid-column: 3 / 4;
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    display: none; }
     @media only screen and (max-width: 56.25em) {
       .nav__navigation {
         grid-column: 1 / -1;
@@ -843,13 +1000,16 @@ p {
 .hero-area {
   grid-column: 1 / -1;
   text-align: center;
-  margin: 3rem; }
+  margin: 5rem 0; }
   @media only screen and (min-width: 112.5em) {
     .hero-area {
-      margin: 5rem; } }
+      margin: 5rem 0; } }
   @media only screen and (max-width: 56.25em) {
     .hero-area {
-      margin: 10rem; } }
+      margin: 10rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .hero-area {
+      margin: 6rem 0; } }
 
 .btn {
   border: none;
@@ -895,6 +1055,9 @@ p {
       @media only screen and (max-width: 56.25em) {
         .story__row > *:not(last-child) {
           margin-bottom: 7rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .story__row > *:not(last-child) {
+          margin-bottom: 5rem; } }
 
 .stats {
   grid-column: full-start / full-end;
@@ -916,6 +1079,10 @@ p {
   @media only screen and (max-width: 56.25em) {
     .services {
       margin: 0 5rem 5rem 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .services {
+      margin: 0;
+      margin-bottom: 4rem; } }
   .services__description {
     grid-column: 1 / -1;
     text-align: center; }
@@ -957,6 +1124,9 @@ p {
       .design__phone {
         max-width: 90%;
         right: 10%; } }
+    @media only screen and (max-width: 37.5em) {
+      .design__phone {
+        max-width: 50%; } }
 
 .what-we-do {
   grid-column: content-start / content-end;
@@ -977,6 +1147,10 @@ p {
         font-size: 1.7rem; } }
   .what-we-do__img img {
     max-width: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .what-we-do__img {
+      max-width: 70%;
+      margin: 0 auto; } }
 
 .team {
   grid-column: content-start / content-end;
@@ -1013,6 +1187,9 @@ p {
   @media only screen and (max-width: 56.25em) {
     .logos {
       grid-template-columns: repeat(3, 1fr); } }
+  @media only screen and (max-width: 37.5em) {
+    .logos {
+      grid-template-columns: repeat(2, 1fr); } }
   .logos__link {
     text-decoration: none; }
   .logos__img {
@@ -1054,6 +1231,10 @@ p {
     .clients {
       grid-template-columns: 1fr;
       padding: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .clients {
+      grid-column-gap: 0.5rem;
+      grid-row-gap: 1.5rem; } }
   .clients__description {
     grid-column: 1 / -1;
     text-align: center; }

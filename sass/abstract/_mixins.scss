@@ -17,6 +17,13 @@
 
 // BREAKPOINT MANAGER
 @mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 28.125em) {
+      //450px
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       // 600px

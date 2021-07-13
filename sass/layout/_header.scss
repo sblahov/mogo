@@ -46,6 +46,7 @@
     grid-column: 3 / 4;
     display: flex;
     justify-content: space-around;
+    display: none; //TEMPORARY
 
     @include respond(tab-port) {
       grid-column: 1 / -1;
@@ -93,14 +94,18 @@
 .hero-area {
   grid-column: 1 / -1;
   text-align: center;
-  margin: 3rem;
+  margin: 5rem 0;
 
   @include respond(big-desktop) {
-    margin: 5rem;
+    margin: 5rem 0;
   }
 
   @include respond(tab-port) {
-    margin: 10rem;
+    margin: 10rem 0;
+  }
+
+  @include respond(phone) {
+    margin: 6rem 0;
   }
 }
 

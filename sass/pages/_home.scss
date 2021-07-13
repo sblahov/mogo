@@ -26,6 +26,10 @@
       @include respond(tab-port) {
         margin-bottom: 7rem;
       }
+
+      @include respond(phone) {
+        margin-bottom: 5rem;
+      }
     }
   }
 }
@@ -52,6 +56,11 @@
 
   @include respond(tab-port) {
     margin: 0 5rem 5rem 5rem;
+  }
+
+  @include respond(phone) {
+    margin: 0;
+    margin-bottom: 4rem;
   }
 
   &__description {
@@ -103,6 +112,10 @@
       max-width: 90%;
       right: 10%;
     }
+
+    @include respond(phone) {
+      max-width: 50%;
+    }
   }
 }
 
@@ -126,6 +139,11 @@
   &__img {
     img {
       max-width: 100%;
+    }
+
+    @include respond(tab-port) {
+      max-width: 70%;
+      margin: 0 auto;
     }
   }
 }
@@ -170,6 +188,10 @@
 
   @include respond(tab-port) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   &__link {
@@ -225,6 +247,11 @@
   @include respond(tab-port) {
     grid-template-columns: 1fr;
     padding: 4rem;
+  }
+
+  @include respond(phone) {
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 1.5rem;
   }
 
   &__description {

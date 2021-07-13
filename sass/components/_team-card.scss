@@ -1,4 +1,8 @@
 .team-card {
+  @include respond(tab-port) {
+    width: 60%;
+  }
+
   &__picture {
     display: grid;
     transition: all 0.5s;
@@ -53,16 +57,11 @@
 
   &__social {
     list-style: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 10;
     display: none;
 
     @media only screen and (hover: none) {
-      display: visible;
-
+      display: flex;
       :not(last-of-type) {
         margin-right: 0.5rem;
       }

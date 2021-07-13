@@ -4,11 +4,24 @@
   grid-column-gap: 1.5rem;
   grid-row-gap: 0.7rem;
 
+  @include respond(tab-port) {
+    grid-column-gap: 3rem;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+  }
+
   &__icon {
     height: 2.7rem;
     width: 2.7rem;
     grid-row: 1 / span 2;
     fill: $color-blue;
     transform: translateY(-2px);
+
+    @include respond(tab-port) {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 }

@@ -27,6 +27,11 @@
       top: 40%;
       left: 5%;
     }
+
+    @include respond(phone) {
+      top: 50%;
+      left: 3%;
+    }
   }
 
   &__btn--right {
@@ -37,6 +42,11 @@
     @include respond(tab-port) {
       top: 40%;
       right: 5%;
+    }
+
+    @include respond(phone) {
+      top: 50%;
+      right: 3%;
     }
   }
 
@@ -102,9 +112,11 @@
     border: 2px solid $color-blue;
     margin-left: 1rem;
 
-    @include respond(tap-port) {
-      height: 3rem;
-      width: 3rem;
+    @include respond(phone) {
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 1rem;
+      margin-top: 1.3rem;
     }
   }
 
@@ -121,6 +133,11 @@
     @include respond(tab-port) {
       font-size: 1.3rem;
     }
+
+    @include respond(phone) {
+      font-size: 1.3rem;
+      margin-bottom: 3px;
+    }
   }
 
   &__cite {
@@ -136,6 +153,8 @@
       @include respond(tab-port) {
         height: 2px;
       }
+
+      @include respond(phone);
     }
   }
 }
@@ -143,4 +162,8 @@
 .slider-2 {
   margin: 6rem auto;
   background-color: $color-white;
+
+  @include respond(tab-port) {
+    margin: 3rem auto;
+  }
 }

@@ -2,6 +2,10 @@
   font-weight: 700;
   padding: 2rem;
 
+  @include respond(phone) {
+    padding: 0.5rem;
+  }
+
   &:first-child {
     border-left: 1px solid $color-white;
   }
@@ -12,6 +16,10 @@
     margin-top: 4rem;
     text-align: center;
     font-size: 6rem;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
   }
 
   &__description {
@@ -22,6 +30,10 @@
 
     @include respond(big-desktop) {
       font-size: 1.4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1rem;
     }
   }
 }
