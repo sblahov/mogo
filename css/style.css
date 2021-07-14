@@ -686,10 +686,6 @@ p {
       .stat__description {
         font-size: 1rem; } }
 
-@media only screen and (max-width: 56.25em) {
-  .team-card {
-    width: 60%; } }
-
 .team-card__picture {
   display: grid;
   transition: all 0.5s; }
@@ -1213,12 +1209,15 @@ p {
   grid-template-columns: repeat(6, 1fr); }
   @media only screen and (max-width: 56.25em) {
     .logos {
-      grid-template-columns: repeat(3, 1fr); } }
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      justify-content: center; } }
   @media only screen and (max-width: 37.5em) {
     .logos {
       grid-template-columns: repeat(2, 1fr); } }
   .logos__link {
-    text-decoration: none; }
+    text-decoration: none;
+    text-align: center; }
   .logos__img {
     max-width: 80%;
     transition: all 0.5s; }

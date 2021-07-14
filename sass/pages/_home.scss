@@ -203,6 +203,8 @@
 
   @include respond(tab-port) {
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    justify-content: center;
   }
 
   @include respond(phone) {
@@ -211,6 +213,7 @@
 
   &__link {
     text-decoration: none;
+    text-align: center;
   }
 
   &__img {

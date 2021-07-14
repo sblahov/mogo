@@ -1,8 +1,4 @@
 .team-card {
-  @include respond(tab-port) {
-    width: 60%;
-  }
-
   &__picture {
     display: grid;
     transition: all 0.5s;
