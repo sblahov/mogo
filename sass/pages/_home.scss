@@ -1,6 +1,11 @@
 .story {
   grid-column: content-start / content-end;
   display: grid;
+  scroll-margin-top: 10rem;
+
+  @include respond(tab-land) {
+    scroll-margin-top: 15rem;
+  }
 
   &__description {
     @include center-grid-row;
@@ -53,6 +58,11 @@
   grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 5rem;
+  scroll-margin-top: 10rem;
+
+  @include respond(tab-land) {
+    scroll-margin-top: 15rem;
+  }
 
   @include respond(tab-port) {
     margin: 0 5rem 5rem 5rem;
@@ -126,6 +136,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3rem;
   grid-column-gap: 4rem;
+  scroll-margin-top: 10rem;
+
+  @include respond(tab-land) {
+    scroll-margin-top: 15rem;
+  }
 
   @include respond(tab-port) {
     grid-template-columns: 1fr;
@@ -239,9 +254,14 @@
     ),
     url("../img/what-people-say-bg.png");
   color: #8a8a8a;
+  scroll-margin-top: 5rem;
 
   @include respond(big-desktop) {
     grid-row-gap: 2rem;
+  }
+
+  @include respond(tab-land) {
+    scroll-margin-top: 12rem;
   }
 
   @include respond(tab-port) {
@@ -265,6 +285,11 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 4rem;
+  scroll-margin-top: 10rem;
+
+  @include respond(tab-land) {
+    scroll-margin-top: 15rem;
+  }
 
   @include respond(tab-port) {
     grid-template-columns: 1fr;

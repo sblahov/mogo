@@ -1,3 +1,6 @@
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelector(".nav__navigation");
+const header = document.querySelector(".header");
 const accordion = document.querySelector(".accordion");
 const slides1 = document.querySelectorAll(".slider-1__slide");
 const btnLeft1 = document.querySelector(".slider-1__btn--left");
@@ -5,6 +8,38 @@ const btnRight1 = document.querySelector(".slider-1__btn--right");
 const slides2 = document.querySelectorAll(".slider-2__slide");
 const btnLeft2 = document.querySelector(".slider-2__btn--left");
 const btnRight2 = document.querySelector(".slider-2__btn--right");
+
+// Sticky Nav
+const navHeight = nav.getBoundingClientRect().height;
+
+const observerCallback = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) nav.classList.add("nav__sticky");
+  if (entry.isIntersecting) nav.classList.remove("nav__sticky");
+};
+
+const observerOptions = {
+  root: null,
+  threshold: 0.1,
+  rootMargin: `-${navHeight}px`,
+};
+
+const headerObserver = new IntersectionObserver(
+  observerCallback,
+  observerOptions
+);
+headerObserver.observe(header);
+
+// Smooth Scrolling
+navLinks.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (!e.target.classList.contains("nav__link")) return;
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
 
 // Expand and collapse services
 
