@@ -18,6 +18,10 @@
     grid-row: 1 / -1;
     grid-column: 1 / 2;
 
+    @include respond(tab-port) {
+      max-width: 60%;
+    }
+
     @include respond(small-phone) {
       grid-row: 1 / 2;
     }
@@ -56,7 +60,7 @@
   }
 
   &__quote {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 
     grid-column: 2 / 3;
     grid-row: 2 / 3;

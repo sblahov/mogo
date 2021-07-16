@@ -97,16 +97,30 @@
     @include center-grid-row;
   }
 
-  &__img {
-    display: inline-block;
+  &__display {
+    position: relative;
+  }
 
+  &__img {
+    display: block;
+  }
+
+  &__tablet {
     margin: 0 auto;
     img {
       max-width: 60%;
       display: block;
       margin: 0 auto;
 
-      @include respond(tab-port) {
+      @include respond(big-desktop) {
+        max-width: 70%;
+      }
+
+      @include respond(tab-land) {
+        max-width: 55%;
+      }
+
+      @include respond(phone) {
         max-width: 45%;
       }
     }
@@ -114,17 +128,25 @@
 
   &__phone {
     position: absolute;
+
     bottom: 0;
-    right: 25%;
-    transform: translateY(20%);
+    right: 0;
+    transform: translate(20%, 20%);
 
-    @include respond(tab-port) {
-      max-width: 90%;
-      right: 10%;
-    }
-
-    @include respond(phone) {
+    img {
       max-width: 50%;
+
+      @include respond(big-desktop) {
+        max-width: 60%;
+      }
+
+      @include respond(tab-land) {
+        max-width: 45%;
+      }
+
+      @include respond(phone) {
+        max-width: 35%;
+      }
     }
   }
 }
